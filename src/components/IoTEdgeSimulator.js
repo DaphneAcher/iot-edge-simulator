@@ -1,6 +1,4 @@
-// src/components/IoTEdgeSimulator.js
 import React, { useEffect, useState } from 'react';
-import * as Icons from 'lucide-react';
 import { SCENARIOS } from '../constants/scenarios';
 import { THEMES } from '../constants/theme';
 
@@ -14,7 +12,7 @@ import ArchitectureFlow from './ArchitectureFlow';
 import InsightsCard from './InsightsCard';
 
 const IoTEdgeSimulator = () => {
-  const theme = THEMES.light; // start light; flip later if you want
+  const theme = THEMES.light; 
 
   const [selectedScenario, setSelectedScenario] = useState('traffic');
   const [isRunning, setIsRunning] = useState(false);
@@ -31,7 +29,6 @@ const IoTEdgeSimulator = () => {
 
   const scenario = SCENARIOS[selectedScenario];
 
-  // init/reset when scenario changes
   useEffect(() => {
     const initial = {};
     const last = {};
@@ -45,7 +42,7 @@ const IoTEdgeSimulator = () => {
     setCloudPackets(0);
     setEdgePackets(0);
     setEvents([]);
-  }, [selectedScenario]); // eslint-disable-line
+  }, [selectedScenario]);
 
   const reset = () => {
     setIsRunning(false);
