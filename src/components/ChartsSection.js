@@ -1,6 +1,5 @@
 import React from 'react';
-import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-         BarChart, Bar } from 'recharts';
+import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar } from 'recharts';
 
 const ChartsSection = ({ cloudData, edgeData, cloudPackets, edgePackets, theme }) => {
   const bars = [
@@ -11,13 +10,12 @@ const ChartsSection = ({ cloudData, edgeData, cloudPackets, edgePackets, theme }
   return (
     <div className="grid grid-cols-1 gap-6">
       <div className={theme.card}>
-        <h2 className={`${theme.h2} mb-3`}>Bandwidth over time</h2>
-        <ResponsiveContainer width="100%" height={280}>
+        <h2 className={theme.h2 + ' mb-2'}>Bandwidth over time</h2>
+        <ResponsiveContainer width="100%" height={260}>
           <LineChart>
             <CartesianGrid strokeDasharray="3 3" stroke={theme.grid} />
-            <XAxis dataKey="time" type="number" domain={['dataMin','dataMax']} stroke={theme.axis}
-                   label={{ value: 's', position: 'insideBottomRight', offset: -8, fill: theme.axis }} />
-            <YAxis stroke={theme.axis} label={{ value: 'KB', angle: -90, position: 'insideLeft', fill: theme.axis }} />
+            <XAxis dataKey="time" type="number" domain={['dataMin','dataMax']} stroke={theme.axis} />
+            <YAxis stroke={theme.axis} />
             <Tooltip />
             <Legend />
             <Line data={cloudData} type="monotone" dataKey="bandwidth" name="Cloud" stroke={theme.cloud} strokeWidth={2} dot={false}/>
@@ -27,8 +25,8 @@ const ChartsSection = ({ cloudData, edgeData, cloudPackets, edgePackets, theme }
       </div>
 
       <div className={theme.card}>
-        <h2 className={`${theme.h2} mb-3`}>Total packets</h2>
-        <ResponsiveContainer width="100%" height={220}>
+        <h2 className={theme.h2 + ' mb-2'}>Total packets</h2>
+        <ResponsiveContainer width="100%" height={200}>
           <BarChart data={bars}>
             <CartesianGrid strokeDasharray="3 3" stroke={theme.grid} />
             <XAxis dataKey="name" stroke={theme.axis} />

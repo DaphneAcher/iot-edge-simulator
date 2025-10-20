@@ -17,7 +17,6 @@ const InsightsCard = ({ cloudPackets, edgePackets, theme }) => {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
       <div className="flex items-center gap-2 mb-2">
-        <Sparkles size={18} className="text-purple-600" />
         <h2 className="text-xl font-semibold">Insights</h2>
       </div>
       {lines.length === 0 ? (
