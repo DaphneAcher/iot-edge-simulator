@@ -331,14 +331,6 @@ Higher reduction percentages in security and agriculture scenarios result from l
 
 [13] Dizdarević, J., Carpio, F., Jukan, A., & Masip-Bruin, X. (2019). A survey of communication protocols for internet of things and related challenges of fog and cloud computing integration. ACM Computing Surveys (CSUR), 51(6), 1-29.
 
-## License
-
-This project is developed for educational purposes as part of a Communication Networks course project.
-
-## Author
-
-Developed as a demonstration of edge computing principles in IoT networks.
-
 ## Acknowledgments
 
 This project utilizes open-source libraries including React, Recharts, and Tailwind CSS. Special thanks to the developers of these tools for enabling rapid prototyping of data visualization applications.
